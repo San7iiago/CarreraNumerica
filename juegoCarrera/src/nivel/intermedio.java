@@ -17,7 +17,8 @@ import ventana.ventana;
  */
 public class intermedio extends javax.swing.JFrame {
 
-    int turno, jugador01, jugador02, jugador03, jugador04, jugadores;
+    int turno, jugador01, jugador02, jugador03, jugador04, jugadores,
+            cont1, cont2, cont3, cont4;
     
     /**
      *
@@ -121,6 +122,7 @@ public class intermedio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Carrera Numerica");
@@ -131,6 +133,8 @@ public class intermedio extends javax.swing.JFrame {
         jPanel02.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel02.setLayout(new java.awt.GridLayout(0, 2));
 
+        jButton2.setBackground(new java.awt.Color(230, 126, 34));
+        jButton2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton2.setText("Lanzar dados!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,51 +143,60 @@ public class intermedio extends javax.swing.JFrame {
         });
         jPanel02.add(jButton2);
 
+        lblResultado.setBackground(new java.awt.Color(0, 0, 0));
         lblResultado.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblResultado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblResultado.setText("0");
         jPanel02.add(lblResultado);
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Cantidad de jugadores:");
         jPanel02.add(jLabel2);
 
+        lblJugadores.setBackground(new java.awt.Color(0, 0, 0));
+        lblJugadores.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblJugadores.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblJugadores.setText("0");
         jPanel02.add(lblJugadores);
 
+        lblJugador1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblJugador1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblJugador1.setText("Jugador 1:");
         jPanel02.add(lblJugador1);
 
-        lblPuntaje1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblPuntaje1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblPuntaje1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPuntaje1.setText("0");
         jPanel02.add(lblPuntaje1);
 
+        lblJugador2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblJugador2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblJugador2.setText("Jugador 2:");
         jPanel02.add(lblJugador2);
 
-        lblPuntaje2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblPuntaje2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblPuntaje2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPuntaje2.setText("0");
         jPanel02.add(lblPuntaje2);
 
+        lblJugador3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblJugador3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblJugador3.setText("Jugador 3:");
         jPanel02.add(lblJugador3);
 
-        lblPuntaje3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblPuntaje3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblPuntaje3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPuntaje3.setText("0");
         jPanel02.add(lblPuntaje3);
 
+        lblJugador4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblJugador4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblJugador4.setText("Jugador 4:");
         jPanel02.add(lblJugador4);
 
-        lblPuntaje4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        lblPuntaje4.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         lblPuntaje4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPuntaje4.setText("0");
         jPanel02.add(lblPuntaje4);
@@ -195,9 +208,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn6.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 0, new java.awt.Color(0, 0, 0)));
         jpn6.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel5.setBackground(new java.awt.Color(127, 140, 141));
         jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(236, 240, 241));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("6");
+        jLabel5.setOpaque(true);
         jpn6.add(jLabel5);
 
         jPanel03.add(jpn6);
@@ -205,9 +221,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn7.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn7.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel6.setBackground(new java.awt.Color(127, 140, 141));
         jLabel6.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(236, 240, 241));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("7");
+        jLabel6.setOpaque(true);
         jpn7.add(jLabel6);
 
         jPanel03.add(jpn7);
@@ -215,9 +234,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn8.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn8.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel7.setBackground(new java.awt.Color(127, 140, 141));
         jLabel7.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(236, 240, 241));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("8");
+        jLabel7.setOpaque(true);
         jpn8.add(jLabel7);
 
         jPanel03.add(jpn8);
@@ -225,9 +247,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn9.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn9.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel8.setBackground(new java.awt.Color(127, 140, 141));
         jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(236, 240, 241));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("9");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/llantas.jpg"))); // NOI18N
+        jLabel8.setOpaque(true);
         jpn9.add(jLabel8);
 
         jPanel03.add(jpn9);
@@ -235,9 +260,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn10.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn10.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel9.setBackground(new java.awt.Color(127, 140, 141));
         jLabel9.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(236, 240, 241));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("10");
+        jLabel9.setOpaque(true);
         jpn10.add(jLabel9);
 
         jPanel03.add(jpn10);
@@ -245,9 +273,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn5.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn5.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel11.setBackground(new java.awt.Color(127, 140, 141));
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(236, 240, 241));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("5");
+        jLabel11.setOpaque(true);
         jpn5.add(jLabel11);
 
         jPanel03.add(jpn5);
@@ -255,9 +286,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn22.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 0, new java.awt.Color(0, 0, 0)));
         jpn22.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel24.setBackground(new java.awt.Color(127, 140, 141));
         jLabel24.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(236, 240, 241));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setText("22");
+        jLabel24.setOpaque(true);
         jpn22.add(jLabel24);
 
         jPanel03.add(jpn22);
@@ -265,9 +299,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn23.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn23.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel18.setBackground(new java.awt.Color(127, 140, 141));
         jLabel18.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(236, 240, 241));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("23");
+        jLabel18.setOpaque(true);
         jpn23.add(jLabel18);
 
         jPanel03.add(jpn23);
@@ -275,9 +312,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn24.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn24.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel12.setBackground(new java.awt.Color(127, 140, 141));
         jLabel12.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(236, 240, 241));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("24");
+        jLabel12.setOpaque(true);
         jpn24.add(jLabel12);
 
         jPanel03.add(jpn24);
@@ -285,9 +325,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn11.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn11.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel10.setBackground(new java.awt.Color(127, 140, 141));
         jLabel10.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(236, 240, 241));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("11");
+        jLabel10.setOpaque(true);
         jpn11.add(jLabel10);
 
         jPanel03.add(jpn11);
@@ -295,9 +338,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn4.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn4.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel17.setBackground(new java.awt.Color(127, 140, 141));
         jLabel17.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(236, 240, 241));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("4");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tacometro.jpg"))); // NOI18N
+        jLabel17.setOpaque(true);
         jpn4.add(jLabel17);
 
         jPanel03.add(jpn4);
@@ -305,9 +351,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn21.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn21.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel30.setBackground(new java.awt.Color(127, 140, 141));
         jLabel30.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(236, 240, 241));
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setText("21");
+        jLabel30.setOpaque(true);
         jpn21.add(jLabel30);
 
         jPanel03.add(jpn21);
@@ -315,9 +364,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn30.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn30.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel35.setBackground(new java.awt.Color(127, 140, 141));
         jLabel35.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(236, 240, 241));
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setText("30");
+        jLabel35.setOpaque(true);
         jpn30.add(jLabel35);
 
         jPanel03.add(jpn30);
@@ -325,9 +377,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn25.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn25.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel13.setBackground(new java.awt.Color(127, 140, 141));
         jLabel13.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(236, 240, 241));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText("25");
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/gasolina.jpg"))); // NOI18N
+        jLabel13.setOpaque(true);
         jpn25.add(jLabel13);
 
         jPanel03.add(jpn25);
@@ -335,9 +390,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn12.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn12.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel16.setBackground(new java.awt.Color(127, 140, 141));
         jLabel16.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(236, 240, 241));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("12");
+        jLabel16.setOpaque(true);
         jpn12.add(jLabel16);
 
         jPanel03.add(jpn12);
@@ -345,9 +403,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn3.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel23.setBackground(new java.awt.Color(127, 140, 141));
         jLabel23.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(236, 240, 241));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setText("3");
+        jLabel23.setOpaque(true);
         jpn3.add(jLabel23);
 
         jPanel03.add(jpn3);
@@ -355,9 +416,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn20.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn20.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel40.setBackground(new java.awt.Color(127, 140, 141));
         jLabel40.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(236, 240, 241));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setText("20");
+        jLabel40.setOpaque(true);
         jpn20.add(jLabel40);
 
         jPanel03.add(jpn20);
@@ -365,9 +429,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn29.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn29.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel27.setBackground(new java.awt.Color(127, 140, 141));
         jLabel27.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(236, 240, 241));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setText("29");
+        jLabel27.setOpaque(true);
         jpn29.add(jLabel27);
 
         jPanel03.add(jpn29);
@@ -375,9 +442,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn26.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn26.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel14.setBackground(new java.awt.Color(127, 140, 141));
         jLabel14.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(236, 240, 241));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("26");
+        jLabel14.setOpaque(true);
         jpn26.add(jLabel14);
 
         jPanel03.add(jpn26);
@@ -385,9 +455,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn13.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn13.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel22.setBackground(new java.awt.Color(127, 140, 141));
         jLabel22.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(236, 240, 241));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setText("13");
+        jLabel22.setOpaque(true);
         jpn13.add(jLabel22);
 
         jPanel03.add(jpn13);
@@ -395,9 +468,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn2.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn2.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel29.setBackground(new java.awt.Color(127, 140, 141));
         jLabel29.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(236, 240, 241));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setText("2");
+        jLabel29.setOpaque(true);
         jpn2.add(jLabel29);
 
         jPanel03.add(jpn2);
@@ -405,9 +481,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn19.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn19.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel41.setBackground(new java.awt.Color(127, 140, 141));
         jLabel41.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(236, 240, 241));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("19");
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bandera.JPG"))); // NOI18N
+        jLabel41.setOpaque(true);
         jpn19.add(jLabel41);
 
         jPanel03.add(jpn19);
@@ -415,9 +494,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn28.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn28.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel21.setBackground(new java.awt.Color(127, 140, 141));
         jLabel21.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(236, 240, 241));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("28");
+        jLabel21.setOpaque(true);
         jpn28.add(jLabel21);
 
         jPanel03.add(jpn28);
@@ -425,9 +507,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn27.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 1, new java.awt.Color(0, 0, 0)));
         jpn27.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel15.setBackground(new java.awt.Color(127, 140, 141));
         jLabel15.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(236, 240, 241));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("27");
+        jLabel15.setOpaque(true);
         jpn27.add(jLabel15);
 
         jPanel03.add(jpn27);
@@ -435,9 +520,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn14.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn14.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel28.setBackground(new java.awt.Color(127, 140, 141));
         jLabel28.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(236, 240, 241));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("14");
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/garaje.JPG"))); // NOI18N
+        jLabel28.setOpaque(true);
         jpn14.add(jLabel28);
 
         jPanel03.add(jpn14);
@@ -445,9 +533,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn1.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 0, 1, new java.awt.Color(0, 0, 0)));
         jpn1.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel39.setBackground(new java.awt.Color(127, 140, 141));
         jLabel39.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(236, 240, 241));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setText("1");
+        jLabel39.setOpaque(true);
         jpn1.add(jLabel39);
 
         jPanel03.add(jpn1);
@@ -455,9 +546,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn18.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn18.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel42.setBackground(new java.awt.Color(127, 140, 141));
         jLabel42.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(236, 240, 241));
         jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel42.setText("18");
+        jLabel42.setOpaque(true);
         jpn18.add(jLabel42);
 
         jPanel03.add(jpn18);
@@ -465,9 +559,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn17.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn17.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel43.setBackground(new java.awt.Color(127, 140, 141));
         jLabel43.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(236, 240, 241));
         jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel43.setText("17");
+        jLabel43.setOpaque(true);
         jpn17.add(jLabel43);
 
         jPanel03.add(jpn17);
@@ -475,9 +572,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn16.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(0, 0, 0)));
         jpn16.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel44.setBackground(new java.awt.Color(127, 140, 141));
         jLabel44.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(236, 240, 241));
         jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel44.setText("16");
+        jLabel44.setOpaque(true);
         jpn16.add(jLabel44);
 
         jPanel03.add(jpn16);
@@ -485,9 +585,12 @@ public class intermedio extends javax.swing.JFrame {
         jpn15.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 1, new java.awt.Color(0, 0, 0)));
         jpn15.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel37.setBackground(new java.awt.Color(127, 140, 141));
         jLabel37.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(236, 240, 241));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setText("15");
+        jLabel37.setOpaque(true);
         jpn15.add(jLabel37);
 
         jPanel03.add(jpn15);
@@ -495,27 +598,38 @@ public class intermedio extends javax.swing.JFrame {
         inicio.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(0, 0, 0)));
         inicio.setLayout(new java.awt.GridLayout(0, 1));
 
+        jLabel45.setBackground(new java.awt.Color(127, 140, 141));
         jLabel45.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(236, 240, 241));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel45.setText("Inicio");
+        jLabel45.setOpaque(true);
         inicio.add(jLabel45);
 
         jPanel03.add(inicio);
 
+        carro1.setBackground(new java.awt.Color(127, 140, 141));
         carro1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        carro1.setText("Carro 1");
+        carro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carro1.jpg"))); // NOI18N
+        carro1.setOpaque(true);
         jPanel03.add(carro1);
 
+        carro2.setBackground(new java.awt.Color(127, 140, 141));
         carro2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        carro2.setText("Carro 2");
+        carro2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carro2.jpg"))); // NOI18N
+        carro2.setOpaque(true);
         jPanel03.add(carro2);
 
+        carro3.setBackground(new java.awt.Color(127, 140, 141));
         carro3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        carro3.setText("Carro 3");
+        carro3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carro3.jpg"))); // NOI18N
+        carro3.setOpaque(true);
         jPanel03.add(carro3);
 
+        carro4.setBackground(new java.awt.Color(127, 140, 141));
         carro4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        carro4.setText("Carro 4");
+        carro4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/carro4.jpg"))); // NOI18N
+        carro4.setOpaque(true);
         jPanel03.add(carro4);
 
         jPanel01.add(jPanel03, java.awt.BorderLayout.CENTER);
@@ -525,142 +639,144 @@ public class intermedio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    public void avanzar(int jugador, int resultado, JLabel carro, JLabel posicion) {
+    public void avanzar(int jugador, JLabel carro, JLabel posicion) {
         switch (jugador) {
             case 1:
                 jpn1.add(carro);
-                posicion.setText("1");
+                posicion.setText(jugador+"");
                 break;
             case 2:
                 jpn2.add(carro);
-                posicion.setText("2");
+                posicion.setText(jugador+"");
                 break;
             case 3:
                 jpn3.add(carro);
-                posicion.setText("3");
+                posicion.setText(jugador+"");
                 break;
             case 4:
                 jpn4.add(carro);
-                posicion.setText("4");
+                posicion.setText(jugador+"");
                 break;
             case 5:
                 jpn5.add(carro);
-                posicion.setText("5");
+                posicion.setText(jugador+"");
                 break;
             case 6:
                 jpn6.add(carro);
-                posicion.setText("6");
+                posicion.setText(jugador+"");
                 break;
             case 7:
                 jpn7.add(carro);
-                posicion.setText("7");
+                posicion.setText(jugador+"");
                 break;
             case 8:
                 jpn8.add(carro);
-                posicion.setText("8");
+                posicion.setText(jugador+"");
                 break;
             case 9:
                 jpn9.add(carro);
-                posicion.setText("9");
+                posicion.setText(jugador+"");
                 break;
             case 10:
                 jpn10.add(carro);
-                posicion.setText("10");
+                posicion.setText(jugador+"");
                 break;
             case 11:
                 jpn11.add(carro);
-                posicion.setText("11");
+                posicion.setText(jugador+"");
                 break;
             case 12:
                 jpn12.add(carro);
-                posicion.setText("12");
+                posicion.setText(jugador+"");
                 break;
             case 13:
                 jpn13.add(carro);
-                posicion.setText("13");
+                posicion.setText(jugador+"");
                 break;
             case 14:
                 jpn14.add(carro);
-                posicion.setText("14");
+                posicion.setText(jugador+"");
                 break;
             case 15:
                 jpn15.add(carro);
-                posicion.setText("15");
+                posicion.setText(jugador+"");
                 break;
             case 16:
                 jpn16.add(carro);
-                posicion.setText("16");
+                posicion.setText(jugador+"");
                 break;
             case 17:
                 jpn17.add(carro);
-                posicion.setText("17");
+                posicion.setText(jugador+"");
                 break;
             case 18:
                 jpn18.add(carro);
-                posicion.setText("18");
+                posicion.setText(jugador+"");
                 break;
             case 19:
                 jpn19.add(carro);
-                posicion.setText("19");
+                posicion.setText(jugador+"");
                 break;
             case 20:
                 jpn20.add(carro);
-                posicion.setText("20");
+                posicion.setText(jugador+"");
                 break;
             case 21:
                 jpn21.add(carro);
-                posicion.setText("21");
+                posicion.setText(jugador+"");
                 break;
             case 22:
                 jpn22.add(carro);
-                posicion.setText("22");
+                posicion.setText(jugador+"");
                 break;
             case 23:
                 jpn23.add(carro);
-                posicion.setText("23");
+                posicion.setText(jugador+"");
                 break;
             case 24:
                 jpn24.add(carro);
-                posicion.setText("24");
+                posicion.setText(jugador+"");
                 break;
             case 25:
                 jpn25.add(carro);
-                posicion.setText("25");
+                posicion.setText(jugador+"");
                 break;
             case 26:
                 jpn26.add(carro);
-                posicion.setText("26");
+                posicion.setText(jugador+"");
                 break;
             case 27:
                 jpn27.add(carro);
-                posicion.setText("27");
+                posicion.setText(jugador+"");
                 break;
             case 28:
                 jpn28.add(carro);
-                posicion.setText("28");
+                posicion.setText(jugador+"");
                 break;
             case 29:
                 jpn29.add(carro);
-                posicion.setText("29");
+                posicion.setText(jugador+"");
                 break;
             case 30:
                 jpn30.add(carro);
-                posicion.setText("30");
+                posicion.setText(jugador+"");
                 break;
             default:
                 break;
         }
     }
     
-    public void proceso(int jugador, int resultado, JLabel carro, JLabel posicion) {
+    public void proceso(int jugador, int resultado, JLabel carro, JLabel posicion, int pares) {
         if (jugador == 30) {
-            avanzar(jugador, resultado, carro, posicion);
+            avanzar(jugador, carro, posicion);
             JOptionPane.showMessageDialog(rootPane, "!! -- El jugador " + turno + " gana la partida -- !!");
+            System.exit(0);
+        } else if (pares == 3){
+            JOptionPane.showMessageDialog(rootPane, "3 Pares consecutivos \n !! -- El jugador " + turno + " gana la partida -- !!");
+            System.exit(0);
         } else if (jugador <= 30) {
-            avanzar(jugador, resultado, carro, posicion);
+            avanzar(jugador, carro, posicion);
             JOptionPane.showMessageDialog(rootPane, "El jugador " + turno + " avanza " + resultado + " Pasos");
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza");
         }
     }
     
@@ -668,41 +784,61 @@ public class intermedio extends javax.swing.JFrame {
         this.setMinimumSize(new Dimension(800, 600));
         turno++;
         int cantidadJugadores = Integer.parseInt(lblJugadores.getText());
-        
+
         double dado = Math.random() * 6 + 1;
         int resultado = (int) dado;
         lblResultado.setText(resultado + "");
         switch (turno) {
             case 1:
-                if ((jugador01 + resultado) <= 20) {
-                    jugador01 = jugador01 + resultado;
-                    proceso(jugador01, resultado, carro1, lblPuntaje1);
+                if (resultado%2==0){
+                    cont1++;
                 } else {
-                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (20 - jugador01) + " Para ganar");
+                    cont1 = 0;
+                }
+                if ((jugador01 + resultado) <= 30) {
+                    jugador01 = jugador01 + resultado;
+                    proceso(jugador01, resultado, carro1, lblPuntaje1, cont1);
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (30 - jugador01) + " Para ganar");
                 }
                 break;
             case 2:
-                if ((jugador02 + resultado) <= 20) {
-                    jugador02 = jugador02 + resultado;
-                    proceso(jugador02, resultado, carro2, lblPuntaje2);
+                if (resultado%2==0){
+                    cont2++;
                 } else {
-                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (20 - jugador02) + " Para ganar");
+                    cont2 = 0;
+                }
+                if ((jugador02 + resultado) <= 30) {
+                    jugador02 = jugador02 + resultado;
+                    proceso(jugador02, resultado, carro2, lblPuntaje2, cont2);
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (30 - jugador02) + " Para ganar");
                 }
                 break;
             case 3:
-                if ((jugador03 + resultado) <= 20) {
-                    jugador03 = jugador03 + resultado;
-                    proceso(jugador03, resultado, carro3, lblPuntaje3);
+                if (resultado%2==0){
+                    cont3++;
                 } else {
-                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (20 - jugador03) + " Para ganar");
+                    cont3 = 0;
+                }
+                if ((jugador03 + resultado) <= 30) {
+                    jugador03 = jugador03 + resultado;
+                    proceso(jugador03, resultado, carro3, lblPuntaje3, cont3);
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (30 - jugador03) + " Para ganar");
                 }
                 break;
             case 4:
-                if ((jugador04 + resultado) <= 20) {
-                    jugador04 = jugador04 + resultado;
-                    proceso(jugador04, resultado, carro4, lblPuntaje4);
+                if (resultado%2==0){
+                    cont4++;
                 } else {
-                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (20 - jugador04) + " Para ganar");
+                    cont4 = 0;
+                }
+                if ((jugador04 + resultado) <= 30) {
+                    jugador04 = jugador04 + resultado;
+                    proceso(jugador04, resultado, carro4, lblPuntaje4, cont4);
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Resultado: " + resultado + "\nEl jugador " + turno + " no avanza " + "\nNecesita " + (30 - jugador04) + " Para ganar");
                 }
                 break;
             default:
